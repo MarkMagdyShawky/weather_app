@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
-import 'package:weather_app/features/splash/presentation/views/screens/splash_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: kPrimaryColor,
+        fontFamily: "Inter",
       ),
-      home: SplashView(),
+      routerConfig: AppRouter.router,
     );
   }
 }
