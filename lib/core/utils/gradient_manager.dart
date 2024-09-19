@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-Gradient LinearGradientbackground(Color begainColor, Color endColor) {
+Gradient LinearGradientbackground(List<Color> colors) {
   return LinearGradient(
-    colors: [begainColor, endColor],
+    colors: colors,
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
   );

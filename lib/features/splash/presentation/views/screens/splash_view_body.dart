@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
@@ -19,6 +21,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   @override
   void initState() {
     SlidingAnimationHelper();
+    NavigateHome();
     super.initState();
   }
 
@@ -57,5 +60,14 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     slidingAnimation =
         Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero).animate(animationController);
     animationController.forward();
+  }
+
+  void NavigateHome() {
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        GoRouter.of(context).pushReplacement(RoutesName.kHomeView);
+      },
+    );
   }
 }
