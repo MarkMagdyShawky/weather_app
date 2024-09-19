@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/features/splash/presentation/views/screens/splash_view.dart';
 
 class MyApp extends StatelessWidget {
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
+        scaffoldBackgroundColor: kPrimaryColor,
       ),
       home: SplashView(),
     );
