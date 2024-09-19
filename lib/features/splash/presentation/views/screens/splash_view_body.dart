@@ -3,7 +3,7 @@ import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
-import 'package:weather_app/features/splash/presentation/views/widgets/slidingTextAnaimation.dart';
+import 'package:weather_app/features/splash/presentation/views/widgets/sliding_text_anaimation.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -34,7 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       width: PageDimensions().pageWidth(context),
       height: PageDimensions().pageHeight(context),
       decoration: BoxDecoration(
-        gradient: LinearGradientbackground(kPrimaryColor, kSecondColor),
+        gradient: LinearGradientbackground(kSplashBackgroundColorList),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,6 +45,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
             width: 200,
             height: 200,
           ),
+          SizedBox(height: 20),
           SlidingTextAnimation(slidingAnimation: slidingAnimation),
         ],
       ),
