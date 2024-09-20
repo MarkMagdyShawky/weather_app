@@ -7,3 +7,5 @@ const double kPadding25 = 25.0;
 const double kPadding30 = 30.0;
 
 const double kPadding35 = 35.0;
+
+const double kPadding40 = 40.0;
