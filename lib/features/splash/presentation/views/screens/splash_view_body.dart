@@ -37,7 +37,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       width: PageDimensions().pageWidth(context),
       height: PageDimensions().pageHeight(context),
       decoration: BoxDecoration(
-        gradient: LinearGradientbackground(kSplashBackgroundColorList),
+        gradient: LinearGradientbackground(kMainBackgroundColorList),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
