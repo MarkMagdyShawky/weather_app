@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
@@ -11,12 +13,15 @@ class CustomHomeSection2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void onPressed() {
+      GoRouter.of(context).pop(RoutesName.kSearchView);
+    }
+
     return Expanded(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
@@ -48,6 +53,7 @@ class CustomHomeSection2 extends StatelessWidget {
             child: SizedBox(
               width: PageDimensions().pageWidth(context),
               child: CustomButton(
+                onPressed: onPressed,
                 backgroundColor: kGreenColor,
                 textColor: kFontWhite,
                 text: 'Get Start',

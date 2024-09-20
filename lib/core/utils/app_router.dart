@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:weather_app/features/home/presentation/views/screens/home_view.dart';
+import 'package:weather_app/features/search/presentation/views/screens/search_view.dart';
 import 'package:weather_app/features/splash/presentation/views/screens/splash_view.dart';
 
 abstract class AppRouter {
@@ -12,6 +13,10 @@ abstract class AppRouter {
       GoRoute(
         path: RoutesName.kHomeView,
         builder: (context, state) => HomeView(),
+      ),
+      GoRoute(
+        path: RoutesName.kSearchView,
+        builder: (context, state) => SearchView(),
       )
     ],
   );
