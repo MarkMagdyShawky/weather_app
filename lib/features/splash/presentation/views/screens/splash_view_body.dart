@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
-import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:weather_app/features/splash/presentation/views/widgets/custom_splah_view_logo.dart';
 import 'package:weather_app/features/splash/presentation/views/widgets/sliding_text_anaimation.dart';
