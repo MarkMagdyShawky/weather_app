@@ -1,3 +1,5 @@
+const double kPadding10 = 10.0;
+
 const double kPadding15 = 15.0;
 
 const double kPadding20 = 20.0;
