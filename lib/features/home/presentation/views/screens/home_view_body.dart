@@ -20,16 +20,16 @@ class HomeViewBody extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradientbackground(kMainHomeBackgroundColorList),
       ),
-      child: Padding(
-        padding: const EdgeInsets.only(top: kPadding40, right: kPadding20, left: kPadding20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            CustomAppBar(),
-            Lottie.asset(ImageManager.worldJson),
-            CustomHomeSection2(),
-          ],
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: kPadding20, left: kPadding20, top: kPadding40),
+            child: CustomAppBar(),
+          ),
+          Lottie.asset(ImageManager.worldJson),
+          CustomHomeSection2(),
+        ],
       ),
     );
   }
