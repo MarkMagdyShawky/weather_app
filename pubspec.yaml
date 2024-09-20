@@ -98,6 +98,11 @@ flutter:
       fonts:
         - asset: assets/fonts/Inter.ttf
         # - asset: fonts/TrajanPro_Bold.ttf
+    #         weight: 700
+    - family: Acme
+      fonts:
+        - asset: assets/fonts/Acme.ttf
+        # - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,

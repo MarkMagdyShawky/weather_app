@@ -35,6 +35,7 @@ abstract class Styles {
   static const textStyleLogo = TextStyle(
     fontSize: 34,
     fontWeight: FontWeight.bold,
+    fontFamily: 'Acme',
   );
 
   static const textStyle42 = TextStyle(
