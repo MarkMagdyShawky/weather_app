@@ -21,7 +21,7 @@ class CustomHomeSection2 extends StatelessWidget {
             children: <Widget>[
               Text(
                 "No Weather Yet ",
-                style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+                style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold, color: kGreenColor),
               ),
               Image(
                 image: AssetImage(ImageManager.noEntryGif),
@@ -31,20 +31,20 @@ class CustomHomeSection2 extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 15,
+            height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kPadding40),
+            padding: const EdgeInsets.symmetric(horizontal: kPadding30),
             child: Text(
               "Search now for your location ",
-              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold, color: kGreenColor),
             ),
           ),
           const SizedBox(
             height: 20,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kPadding40),
+            padding: const EdgeInsets.symmetric(horizontal: kPadding30),
             child: SizedBox(
               width: PageDimensions().pageWidth(context),
               child: CustomButton(

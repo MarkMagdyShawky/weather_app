@@ -24,7 +24,7 @@ class HomeViewBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(right: kPadding20, left: kPadding20, top: kPadding40),
+            padding: const EdgeInsets.only(right: kPadding25, left: kPadding25, top: kPadding50),
             child: CustomAppBar(),
           ),
           Lottie.asset(ImageManager.worldJson),
