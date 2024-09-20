@@ -3,4 +3,6 @@ class ImageManager {
 
   static String cloudJson = "assets/images/icons/Cloud.json";
   static String cloudGif = "assets/images/icons/cloud.gif";
+
+  static String searchGif = "assets/images/icons/search.gif";
 }
