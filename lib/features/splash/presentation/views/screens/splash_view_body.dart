@@ -5,6 +5,7 @@ import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
+import 'package:weather_app/features/splash/presentation/views/widgets/custom_splah_view_logo.dart';
 import 'package:weather_app/features/splash/presentation/views/widgets/sliding_text_anaimation.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -43,11 +44,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image(
-            image: AssetImage(ImageManager.appLogo),
-            width: 200,
-            height: 200,
-          ),
+          CustomSplashViewLogo(),
           SizedBox(height: 20),
           SlidingTextAnimation(slidingAnimation: slidingAnimation),
         ],
