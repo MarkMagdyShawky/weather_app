@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
@@ -24,6 +25,8 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
+          elevation: 30,
+          shadowColor: backgroundColor.withOpacity(0.4),
           shape: RoundedRectangleBorder(
             borderRadius: borderRadius ?? BorderRadius.circular(15),
           ),
@@ -33,9 +36,19 @@ class CustomButton extends StatelessWidget {
             fontWeight: FontWeight.w900,
           ),
         ),
-        child: Text(
-          text,
-          style: TextStyle(color: textColor, fontSize: 22),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: TextStyle(color: textColor, fontSize: 22),
+            ),
+            Image(
+              image: AssetImage(ImageManager.fireworkGif),
+              width: 35,
+              height: 35,
+            ),
+          ],
         ),
       ),
     );
