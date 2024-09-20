@@ -14,7 +14,7 @@ class CustomHomeSection2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void onPressed() {
-      GoRouter.of(context).pop(RoutesName.kSearchView);
+      GoRouter.of(context).push(RoutesName.kSearchView);
     }
 
     return Expanded(
