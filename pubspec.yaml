@@ -103,6 +103,11 @@ flutter:
       fonts:
         - asset: assets/fonts/Acme.ttf
         # - asset: fonts/TrajanPro_Bold.ttf
+    #         weight: 700
+    - family: PingFang-SC
+      fonts:
+        - asset: assets/fonts/PingFang-SC.ttf
+        # - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,

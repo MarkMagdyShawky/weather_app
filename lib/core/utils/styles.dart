@@ -17,6 +17,12 @@ abstract class Styles {
     fontWeight: FontWeight.normal,
   );
 
+  static const textStyle19 = TextStyle(
+    fontSize: 19,
+    fontWeight: FontWeight.normal,
+    fontFamily: 'PingFang SC',
+  );
+
   static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
