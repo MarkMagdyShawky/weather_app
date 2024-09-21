@@ -18,14 +18,15 @@ class SearchViewBody extends StatelessWidget {
         gradient: LinearGradientbackground(kMainBackgroundColorList),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kPadding20, vertical: kPadding35),
+        padding: const EdgeInsets.only(left: kPadding20, right: kPadding20, top: kPadding50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               "Search For any Countery",
-              style: Styles.textStyle22,
+              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w600),
             ),
+            SizedBox(height: 15),
             CustomSearchTextField(),
           ],
         ),
