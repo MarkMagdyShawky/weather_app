@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
@@ -10,6 +12,9 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onSubmitted: (value) {
+        GoRouter.of(context).pushReplacement(RoutesName.kHomeView);
+      },
       style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600),
       decoration: InputDecoration(
         hintText: 'Enter location',
@@ -22,7 +27,9 @@ class CustomSearchTextField extends StatelessWidget {
         suffixIcon: Padding(
           padding: EdgeInsets.all(kPadding10),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).pushReplacement(RoutesName.kHomeView);
+            },
             child: Image(
               image: AssetImage(ImageManager.searchGif),
               width: 35,
