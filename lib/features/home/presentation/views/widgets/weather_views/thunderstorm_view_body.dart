@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
+import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_app_bar.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_state_image.dart';
 
 class ThunderstormViewBody extends StatelessWidget {
   const ThunderstormViewBody({super.key});
@@ -18,9 +22,10 @@ class ThunderstormViewBody extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.only(top: kPadding45, right: kPadding20, left: kPadding20),
-        child: Column(
+        child: ListView(
           children: <Widget>[
             CustomWeatherAppBar(location: "San Fransisco", updatingTime: '11:00'),
+            CustomWeatherStateImage(),
           ],
         ),
       ),
