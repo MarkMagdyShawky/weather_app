@@ -6,7 +6,7 @@ import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:lottie/lottie.dart';
 
-import 'package:weather_app/features/home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:weather_app/core/widget/custom_app_bar.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_home_section2.dart';
 
 class HomeViewBody extends StatelessWidget {
