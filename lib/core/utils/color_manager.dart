@@ -25,3 +25,5 @@ const Color kThunderstormColor1 = Color(0xffBCE8FF);
 const Color kThunderstormColor2 = Color(0xffFFFFFF);
 
 const Color kCloudyColor = Color(0xff1D2837);
+
+const Color kShadowColor = Color.fromARGB(255, 255, 240, 179);
