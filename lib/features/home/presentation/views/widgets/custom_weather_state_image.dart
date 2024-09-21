@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
-import 'package:weather_app/core/utils/image_manager.dart';
 
 class CustomWeatherStateImage extends StatelessWidget {
   const CustomWeatherStateImage({
     super.key,
+    required this.image,
   });
-
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -23,7 +23,7 @@ class CustomWeatherStateImage extends StatelessWidget {
               borderRadius: BorderRadius.circular(100),
             ),
           ),
-          Lottie.asset(ImageManager.thunderstormJson, width: 230, height: 220),
+          Lottie.asset(image, width: 230, height: 220),
         ],
       ),
     );

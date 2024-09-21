@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lottie/lottie.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
@@ -25,7 +23,9 @@ class ThunderstormViewBody extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             CustomWeatherAppBar(location: "San Fransisco", updatingTime: '11:00'),
-            CustomWeatherStateImage(),
+            CustomWeatherStateImage(
+              image: ImageManager.thunderstormJson,
+            ),
           ],
         ),
       ),
