@@ -47,13 +47,6 @@ class CloudyViewBody extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  CustomMinWeatherCard(
-                    date: '22/9',
-                    image: ImageManager.cloudGif,
-                    temp: '23',
-                    textsColor: kFontWhite1,
-                  ),
-                  // Current day
                   Container(
                     padding: EdgeInsets.symmetric(vertical: kPadding15),
                     decoration: BoxDecoration(
@@ -67,6 +60,14 @@ class CloudyViewBody extends StatelessWidget {
                       textsColor: kFontWhite1,
                     ),
                   ),
+                  CustomMinWeatherCard(
+                    date: '22/9',
+                    image: ImageManager.cloudGif,
+                    temp: '23',
+                    textsColor: kFontWhite1,
+                  ),
+                  // Current day
+
                   CustomMinWeatherCard(
                     date: '22/9',
                     image: ImageManager.cloudGif,

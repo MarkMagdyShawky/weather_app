@@ -47,13 +47,6 @@ class ThunderstormViewBody extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  CustomMinWeatherCard(
-                    date: '22/9',
-                    image: ImageManager.cloudGif,
-                    temp: '23',
-                    textsColor: kFontBlack1,
-                  ),
-                  // Current day
                   Container(
                     padding: EdgeInsets.symmetric(vertical: kPadding15),
                     decoration: BoxDecoration(
@@ -67,6 +60,14 @@ class ThunderstormViewBody extends StatelessWidget {
                       textsColor: kFontBlack1,
                     ),
                   ),
+                  CustomMinWeatherCard(
+                    date: '22/9',
+                    image: ImageManager.cloudGif,
+                    temp: '23',
+                    textsColor: kFontBlack1,
+                  ),
+                  // Current day
+
                   CustomMinWeatherCard(
                     date: '22/9',
                     image: ImageManager.cloudGif,
