@@ -55,7 +55,7 @@ class CustomHomeSection2 extends StatelessWidget {
               child: CustomButton(
                 onPressed: onPressed,
                 backgroundColor: kGreenColor,
-                textColor: kFontWhite,
+                textColor: kFontWhite1,
                 text: 'Get Start',
                 borderRadius: BorderRadius.circular(35),
               ),
