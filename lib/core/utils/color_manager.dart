@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 
-const kMainHomeBackgroundColorList = [kDesertColor4, kDesertColor3, kDesertColor2, kDesertColor1];
+const kMainHomeBackgroundColorList = [
+  kDesertColor4,
+  kDesertColor3,
+  kDesertColor2,
+  kDesertColor1
+];
 const kMainBackgroundColorList = [kSecondColor, kPrimaryColor];
 const kSunnyColorList = [kSunnyColor1, kSunnyColor2];
 const kThunderstormColorList = [kThunderstormColor1, kThunderstormColor2];
+const kCloudyColorList = [kCloudyColor, kCloudyColor];
 
 const Color kPrimaryColor = Color(0xff2680ef);
 const Color kSecondColor = Color(0xff72dffd);
 
-const Color kFontWhite = Colors.white;
-const Color kFontBlack = Color.fromARGB(255, 69, 69, 69);
+const Color kFontWhite1 = Colors.white;
+const Color kFontWhite2 = Color(0xffb7b7b7);
+
+const Color kFontBlack1 = Colors.black;
+const Color kFontBlack2 = Color(0xFF383838);
 
 const Color kDesertColor1 = Color(0xffFDDEAB);
 const Color kDesertColor2 = Color(0xffFCDCAC);
