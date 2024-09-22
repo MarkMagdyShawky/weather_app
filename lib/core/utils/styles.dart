@@ -31,6 +31,7 @@ abstract class Styles {
   static const textStyle22 = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.normal,
+    fontFamily: 'PingFang SC',
   );
 
   static const textStyle24 = TextStyle(
@@ -48,5 +49,11 @@ abstract class Styles {
     fontSize: 42,
     fontWeight: FontWeight.w600,
     fontFamily: 'BebasNeue',
+  );
+
+  static const textStyle48 = TextStyle(
+    fontSize: 48,
+    fontWeight: FontWeight.w900,
+    fontFamily: 'Inter',
   );
 }
