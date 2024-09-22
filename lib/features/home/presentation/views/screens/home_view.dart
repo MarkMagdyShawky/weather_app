@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/features/home/presentation/views/screens/home_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/cloudy_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/sunny_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/thunderstorm_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -7,7 +10,10 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomeViewBody(),
+      // body: HomeViewBody(),
+      // body: ThunderstormViewBody(),
+      // body: SunnyViewBody(),
+      body: CloudyViewBody(),
     );
   }
 }
