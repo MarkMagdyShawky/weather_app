@@ -17,4 +17,7 @@ class ImageManager {
   static String thunderstormSVG = "assets/images/weather_images/thunderstorm.svg";
 
   static String thunderstormPNG = "assets/images/weather_images/thunderstorm.png";
+
+  static String vectorLine = "assets/images/weather_images/Vector.png";
+
 }
