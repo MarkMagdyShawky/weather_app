@@ -57,7 +57,7 @@ class ThunderstormViewBody extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.symmetric(vertical: kPadding15),
                     decoration: BoxDecoration(
-                      color: kFontBlack1.withOpacity(0.2),
+                      color: kFontBlack1.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: CustomMinWeatherCard(
