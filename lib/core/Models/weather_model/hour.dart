@@ -6,11 +6,11 @@ class Hour extends Equatable {
   final int? timeEpoch;
   final String? time;
   final double? tempC;
-  final int? tempF;
+  final double? tempF;
   final int? isDay;
   final Condition? condition;
   final double? windMph;
-  final int? windKph;
+  final double? windKph;
   final int? windDegree;
   final String? windDir;
   final int? pressureMb;
@@ -21,11 +21,11 @@ class Hour extends Equatable {
   final int? humidity;
   final int? cloud;
   final double? feelslikeC;
-  final int? feelslikeF;
+  final double? feelslikeF;
   final double? windchillC;
-  final int? windchillF;
+  final double? windchillF;
   final double? heatindexC;
-  final int? heatindexF;
+  final double? heatindexF;
   final double? dewpointC;
   final double? dewpointF;
   final int? willItRain;
@@ -34,7 +34,7 @@ class Hour extends Equatable {
   final int? chanceOfSnow;
   final int? visKm;
   final int? visMiles;
-  final double? gustMph;
+  final int? gustMph;
   final double? gustKph;
   final int? uv;
 
@@ -79,13 +79,13 @@ class Hour extends Equatable {
         timeEpoch: json['time_epoch'] as int?,
         time: json['time'] as String?,
         tempC: (json['temp_c'] as num?)?.toDouble(),
-        tempF: json['temp_f'] as int?,
+        tempF: (json['temp_f'] as num?)?.toDouble(),
         isDay: json['is_day'] as int?,
         condition: json['condition'] == null
             ? null
             : Condition.fromJson(json['condition'] as Map<String, dynamic>),
         windMph: (json['wind_mph'] as num?)?.toDouble(),
-        windKph: json['wind_kph'] as int?,
+        windKph: (json['wind_kph'] as num?)?.toDouble(),
         windDegree: json['wind_degree'] as int?,
         windDir: json['wind_dir'] as String?,
         pressureMb: json['pressure_mb'] as int?,
@@ -96,11 +96,11 @@ class Hour extends Equatable {
         humidity: json['humidity'] as int?,
         cloud: json['cloud'] as int?,
         feelslikeC: (json['feelslike_c'] as num?)?.toDouble(),
-        feelslikeF: json['feelslike_f'] as int?,
+        feelslikeF: (json['feelslike_f'] as num?)?.toDouble(),
         windchillC: (json['windchill_c'] as num?)?.toDouble(),
-        windchillF: json['windchill_f'] as int?,
+        windchillF: (json['windchill_f'] as num?)?.toDouble(),
         heatindexC: (json['heatindex_c'] as num?)?.toDouble(),
-        heatindexF: json['heatindex_f'] as int?,
+        heatindexF: (json['heatindex_f'] as num?)?.toDouble(),
         dewpointC: (json['dewpoint_c'] as num?)?.toDouble(),
         dewpointF: (json['dewpoint_f'] as num?)?.toDouble(),
         willItRain: json['will_it_rain'] as int?,
@@ -109,7 +109,7 @@ class Hour extends Equatable {
         chanceOfSnow: json['chance_of_snow'] as int?,
         visKm: json['vis_km'] as int?,
         visMiles: json['vis_miles'] as int?,
-        gustMph: (json['gust_mph'] as num?)?.toDouble(),
+        gustMph: json['gust_mph'] as int?,
         gustKph: (json['gust_kph'] as num?)?.toDouble(),
         uv: json['uv'] as int?,
       );

@@ -11,7 +11,8 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl({required this.apiService});
 
   @override
-  Future<Either<Failure, WeatherModel>> featchWeather({required String location}) async {
+  Future<Either<Failure, WeatherModel>> featchWeather(
+      {required String location}) async {
     String key = '92dc0707c053471b85901243242109';
 
     String endPoint = 'forecast.json?key=$key&q=$location&days=3';

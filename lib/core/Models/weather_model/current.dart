@@ -16,7 +16,7 @@ class Current extends Equatable {
   final int? pressureMb;
   final double? pressureIn;
   final double? precipMm;
-  final int? precipIn;
+  final double? precipIn;
   final int? humidity;
   final int? cloud;
   final double? feelslikeC;
@@ -27,7 +27,7 @@ class Current extends Equatable {
   final double? heatindexF;
   final double? dewpointC;
   final double? dewpointF;
-  final int? visKm;
+  final double? visKm;
   final int? visMiles;
   final int? uv;
   final double? gustMph;
@@ -81,7 +81,7 @@ class Current extends Equatable {
         pressureMb: json['pressure_mb'] as int?,
         pressureIn: (json['pressure_in'] as num?)?.toDouble(),
         precipMm: (json['precip_mm'] as num?)?.toDouble(),
-        precipIn: json['precip_in'] as int?,
+        precipIn: (json['precip_in'] as num?)?.toDouble(),
         humidity: json['humidity'] as int?,
         cloud: json['cloud'] as int?,
         feelslikeC: (json['feelslike_c'] as num?)?.toDouble(),
@@ -92,7 +92,7 @@ class Current extends Equatable {
         heatindexF: (json['heatindex_f'] as num?)?.toDouble(),
         dewpointC: (json['dewpoint_c'] as num?)?.toDouble(),
         dewpointF: (json['dewpoint_f'] as num?)?.toDouble(),
-        visKm: json['vis_km'] as int?,
+        visKm: (json['vis_km'] as num?)?.toDouble(),
         visMiles: json['vis_miles'] as int?,
         uv: json['uv'] as int?,
         gustMph: (json['gust_mph'] as num?)?.toDouble(),
