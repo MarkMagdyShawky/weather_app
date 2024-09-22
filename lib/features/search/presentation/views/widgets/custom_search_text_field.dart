@@ -22,7 +22,7 @@ class CustomSearchTextField extends StatelessWidget {
         contentPadding: EdgeInsets.only(left: kPadding15, right: kPadding40),
         enabledBorder: customOutlineInputBorder(),
         focusedBorder: customOutlineInputBorder(),
-        fillColor: kFontWhite.withOpacity(0.4),
+        fillColor: kFontWhite1.withOpacity(0.4),
         filled: true,
         suffixIcon: Padding(
           padding: EdgeInsets.all(kPadding10),
@@ -45,7 +45,7 @@ class CustomSearchTextField extends StatelessWidget {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(35),
       borderSide: BorderSide(
-        color: kFontWhite.withOpacity(0.4),
+        color: kFontWhite1.withOpacity(0.4),
       ),
     );
   }

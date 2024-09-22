@@ -3,12 +3,17 @@ import 'package:go_router/go_router.dart';
 import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
+import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/styles.dart';
 
 class CustomWeatherAppBar extends StatelessWidget {
-  const CustomWeatherAppBar({super.key, required this.location, required this.updatingTime});
+  const CustomWeatherAppBar(
+      {super.key, required this.location, required this.updatingTime, required this.timeColor, required this.locationColor});
+
   final String location;
   final String updatingTime;
+  final Color locationColor;
+final Color timeColor;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,14 +25,12 @@ class CustomWeatherAppBar extends StatelessWidget {
           children: [
             Text(
               location,
-              style: Styles.textStyle19,
+              style: Styles.textStyle20.copyWith(color: locationColor),
             ),
-            SizedBox(height: 7),
+          const  SizedBox(height: kPadding10),
             Text(
               updatingTime,
-              style: Styles.textStyle18.copyWith(
-                color: kFontBlack,
-              ),
+              style: Styles.textStyle18.copyWith(color: timeColor),
             ),
           ],
         ),
@@ -40,7 +43,7 @@ class CustomWeatherAppBar extends StatelessWidget {
             width: 30,
             height: 30,
           ),
-        )
+        ),
       ],
     );
   }
