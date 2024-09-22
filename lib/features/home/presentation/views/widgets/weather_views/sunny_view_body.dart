@@ -65,7 +65,6 @@ class SunnyViewBody extends StatelessWidget {
                       image: ImageManager.cloudGif,
                       temp: '23',
                       textsColor: kFontWhite1,
-
                     ),
                   ),
                   CustomMinWeatherCard(
@@ -73,7 +72,6 @@ class SunnyViewBody extends StatelessWidget {
                     image: ImageManager.cloudGif,
                     temp: '23',
                     textsColor: kFontWhite1,
-
                   ),
                 ],
               ),

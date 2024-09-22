@@ -9,28 +9,32 @@ class CustomCurrentWeatherData extends StatelessWidget {
     required this.weatherState,
     required this.currentTemp,
     required this.minTemp,
-    required this.maxTemp, required this.textsColor,
+    required this.maxTemp,
+    required this.textsColor,
   });
 
   final String weatherState;
   final String currentTemp;
   final String minTemp;
   final String maxTemp;
-final Color textsColor;
+  final Color textsColor;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Text(
           weatherState,
-          style: Styles.textStyle24.copyWith(fontFamily: 'PingFang SC',color: textsColor),
+          style: Styles.textStyle24
+              .copyWith(fontFamily: 'PingFang SC', color: textsColor),
           textAlign: TextAlign.center,
         ),
         SizedBox(height: kPadding10),
         Text(
           "$currentTemp°",
-          style: Styles.textStyle48
-              .copyWith(fontWeight: FontWeight.w600, fontFamily: 'Inter', color:textsColor ),
+          style: Styles.textStyle48.copyWith(
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Inter',
+              color: textsColor),
           textAlign: TextAlign.center,
         ),
         SizedBox(height: kPadding10),
@@ -41,7 +45,6 @@ final Color textsColor;
               "Min: $minTemp°",
               style: Styles.textStyle22.copyWith(color: textsColor),
               textAlign: TextAlign.center,
-
             ),
             Text(
               "Max: $maxTemp°",

@@ -8,12 +8,16 @@ import 'package:weather_app/core/utils/styles.dart';
 
 class CustomWeatherAppBar extends StatelessWidget {
   const CustomWeatherAppBar(
-      {super.key, required this.location, required this.updatingTime, required this.timeColor, required this.locationColor});
+      {super.key,
+      required this.location,
+      required this.updatingTime,
+      required this.timeColor,
+      required this.locationColor});
 
   final String location;
   final String updatingTime;
   final Color locationColor;
-final Color timeColor;
+  final Color timeColor;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,7 +31,7 @@ final Color timeColor;
               location,
               style: Styles.textStyle20.copyWith(color: locationColor),
             ),
-          const  SizedBox(height: kPadding10),
+            const SizedBox(height: kPadding10),
             Text(
               updatingTime,
               style: Styles.textStyle18.copyWith(color: timeColor),

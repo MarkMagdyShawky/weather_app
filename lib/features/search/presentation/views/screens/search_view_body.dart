@@ -18,7 +18,8 @@ class SearchViewBody extends StatelessWidget {
         gradient: LinearGradientbackground(kMainBackgroundColorList),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: kPadding20, right: kPadding20, top: kPadding50),
+        padding: const EdgeInsets.only(
+            left: kPadding20, right: kPadding20, top: kPadding50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

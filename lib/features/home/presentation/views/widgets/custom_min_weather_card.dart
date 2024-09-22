@@ -8,13 +8,14 @@ class CustomMinWeatherCard extends StatelessWidget {
     super.key,
     required this.date,
     required this.image,
-    required this.temp, required this.textsColor,
+    required this.temp,
+    required this.textsColor,
   });
 
   final String date;
   final String image;
   final String temp;
-final Color textsColor;
+  final Color textsColor;
   @override
   Widget build(BuildContext context) {
     return Column(

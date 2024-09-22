@@ -19,7 +19,12 @@ class CustomWeatherStateImage extends StatelessWidget {
             width: 130,
             height: 130,
             decoration: BoxDecoration(
-              boxShadow: [BoxShadow(color: kShadowColor.withOpacity(0.5), blurRadius: 100, spreadRadius: 1)],
+              boxShadow: [
+                BoxShadow(
+                    color: kShadowColor.withOpacity(0.5),
+                    blurRadius: 100,
+                    spreadRadius: 1)
+              ],
               borderRadius: BorderRadius.circular(100),
             ),
           ),

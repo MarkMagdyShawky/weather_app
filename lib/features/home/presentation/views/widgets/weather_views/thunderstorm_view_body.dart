@@ -65,7 +65,6 @@ class ThunderstormViewBody extends StatelessWidget {
                       image: ImageManager.cloudGif,
                       temp: '23',
                       textsColor: kFontBlack1,
-
                     ),
                   ),
                   CustomMinWeatherCard(
@@ -73,7 +72,6 @@ class ThunderstormViewBody extends StatelessWidget {
                     image: ImageManager.cloudGif,
                     temp: '23',
                     textsColor: kFontBlack1,
-
                   ),
                 ],
               ),
