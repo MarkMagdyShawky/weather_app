@@ -4,6 +4,8 @@ import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/custom_current_weather_data.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/custom_min_weather_card.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_app_bar.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_state_image.dart';
 
@@ -19,13 +21,63 @@ class ThunderstormViewBody extends StatelessWidget {
         gradient: LinearCenterGradientbackground(kThunderstormColorList),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: kPadding45, right: kPadding20, left: kPadding20),
+        padding: const EdgeInsets.only(
+            top: kPadding30, right: kPadding20, left: kPadding20),
         child: ListView(
           children: <Widget>[
-            CustomWeatherAppBar(location: "San Fransisco", updatingTime: '11:00'),
-            CustomWeatherStateImage(
-              image: ImageManager.thunderstormJson,
+            CustomWeatherAppBar(
+              location: "San Fransisco",
+              updatingTime: '11:00',
+              locationColor: kFontBlack1,
+              timeColor: kFontBlack2,
             ),
+            CustomWeatherStateImage(image: ImageManager.thunderstormJson),
+            const SizedBox(height: kPadding30),
+            CustomCurrentWeatherData(
+              weatherState: 'Thunderstorm',
+              currentTemp: '24',
+              minTemp: '21',
+              maxTemp: '25',
+              textsColor: kFontBlack1,
+            ),
+            Image(image: AssetImage(ImageManager.vectorLine)),
+            const SizedBox(height: kPadding10),
+            SizedBox(
+              width: PageDimensions().pageWidth(context) - 40,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  CustomMinWeatherCard(
+                    date: '22/9',
+                    image: ImageManager.cloudGif,
+                    temp: '23',
+                    textsColor: kFontBlack1,
+                  ),
+                  // Current day
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: kPadding15),
+                    decoration: BoxDecoration(
+                      color: kFontBlack1.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: CustomMinWeatherCard(
+                      date: '22/9',
+                      image: ImageManager.cloudGif,
+                      temp: '23',
+                      textsColor: kFontBlack1,
+
+                    ),
+                  ),
+                  CustomMinWeatherCard(
+                    date: '22/9',
+                    image: ImageManager.cloudGif,
+                    temp: '23',
+                    textsColor: kFontBlack1,
+
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
