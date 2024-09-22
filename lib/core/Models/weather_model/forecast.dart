@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'forecastday.model.dart';
+import 'forecastday.dart';
 
 class Forecast extends Equatable {
   final List<Forecastday>? forecastday;

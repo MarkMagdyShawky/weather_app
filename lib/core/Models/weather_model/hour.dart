@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'condition.model.dart';
+import 'condition.dart';
 
 class Hour extends Equatable {
   final int? timeEpoch;

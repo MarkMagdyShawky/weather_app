@@ -1,17 +1,17 @@
 import 'package:equatable/equatable.dart';
 
-import 'current.model.dart';
-import 'forecast.model.dart';
-import 'location.model.dart';
+import 'current.dart';
+import 'forecast.dart';
+import 'location.dart';
 
-class Weather extends Equatable {
+class WeatherModel extends Equatable {
   final Location? location;
   final Current? current;
   final Forecast? forecast;
 
-  const Weather({this.location, this.current, this.forecast});
+  const WeatherModel({this.location, this.current, this.forecast});
 
-  factory Weather.fromJson(Map<String, dynamic> json) => Weather(
+  factory WeatherModel.fromJson(Map<String, dynamic> json) => WeatherModel(
         location: json['location'] == null
             ? null
             : Location.fromJson(json['location'] as Map<String, dynamic>),

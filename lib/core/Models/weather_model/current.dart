@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'condition.model.dart';
+import 'condition.dart';
 
 class Current extends Equatable {
   final int? lastUpdatedEpoch;

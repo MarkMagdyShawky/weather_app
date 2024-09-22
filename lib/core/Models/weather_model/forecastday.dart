@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 
-import 'astro.model.dart';
-import 'day.model.dart';
-import 'hour.model.dart';
+import 'astro.dart';
+import 'day.dart';
+import 'hour.dart';
 
 class Forecastday extends Equatable {
   final String? date;

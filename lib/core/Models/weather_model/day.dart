@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'condition.model.dart';
+import 'condition.dart';
 
 class Day extends Equatable {
   final double? maxtempC;
