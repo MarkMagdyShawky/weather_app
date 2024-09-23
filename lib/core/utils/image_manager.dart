@@ -13,13 +13,12 @@ class ImageManager {
 
   static String cloudJson = "assets/images/weather_images/Cloud.json";
   static String cloudGif = "assets/images/weather_images/cloud.gif";
-  static String thunderstormJson =
-      "assets/images/weather_images/thunderstorm.json";
-  static String thunderstormSVG =
-      "assets/images/weather_images/thunderstorm.svg";
 
-  static String thunderstormPNG =
-      "assets/images/weather_images/thunderstorm.png";
+  static String thunderstormJson = "assets/images/weather_images/thunderstorm.json";
+
+  static String thunderstormSVG = "assets/images/weather_images/thunderstorm.svg";
+
+  static String thunderstormPNG = "assets/images/weather_images/thunderstorm.png";
 
   static String vectorLine = "assets/images/weather_images/Vector.png";
 }
