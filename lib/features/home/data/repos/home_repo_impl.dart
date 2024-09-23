@@ -6,12 +6,12 @@ import 'package:weather_app/core/service/api_service.dart';
 import 'package:weather_app/features/home/data/repos/home_repo.dart';
 
 class HomeRepoImpl implements HomeRepo {
-  final ApiService apiService;
-
-  HomeRepoImpl({required this.apiService});
+  // final ApiService apiService;
+//
+  // HomeRepoImpl();
 
   @override
-  Future<Either<Failure, WeatherModel>> featchWeather({required String location}) async {
+  Future<Either<Failure, WeatherModel>> featchWeather(String location) async {
     String key = '92dc0707c053471b85901243242109';
 
     String endPoint = 'forecast.json?key=$key&q=$location&days=4';
@@ -19,7 +19,7 @@ class HomeRepoImpl implements HomeRepo {
     try {
       WeatherModel weatherModel;
 
-      var response = await apiService.get(endPoint);
+      var response = await ApiService().get(endPoint: endPoint);
 
       weatherModel = WeatherModel.fromJson(response);
 
