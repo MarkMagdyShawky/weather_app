@@ -12,16 +12,6 @@ class WeatherInitial extends WeatherState {}
 
 class WeatherLoading extends WeatherState {}
 
-class WeatherSuccess extends WeatherState {
-  WeatherModel weatherModel;
-  WeatherSuccess({
-    required this.weatherModel,
-  });
-}
+class WeatherSuccess extends WeatherState {}
 
-class WeatherFailure extends WeatherState {
-  String errMessage;
-  WeatherFailure({
-    required this.errMessage,
-  });
-}
+class WeatherFailure extends WeatherState {}

@@ -11,6 +11,6 @@ class ApiService {
   Future<WeatherModel> fetchWeather({required String endPoint}) async {
     var response = await _dio.get('$baseUrl$endPoint}');
     print('====>>>>>>>>>$response');
-    return response.data;
+    return WeatherModel.fromJson(response.data);
   }
 }

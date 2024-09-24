@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:weather_app/core/Models/weather_model/weather_model.dart';
 import 'package:weather_app/core/utils/app_router.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
@@ -9,12 +10,12 @@ import 'package:weather_app/core/utils/styles.dart';
 import 'package:weather_app/core/widget/custom_button.dart';
 
 class CustomHomeSection2 extends StatelessWidget {
-  const CustomHomeSection2({super.key});
-
+  CustomHomeSection2({super.key});
+  WeatherModel? weatherModel;
   @override
   Widget build(BuildContext context) {
     void onPressed() {
-      GoRouter.of(context).push(RoutesName.kSearchView);
+      GoRouter.of(context).push(RoutesName.kSearchView, extra: weatherModel);
     }
 
     return Expanded(
@@ -26,8 +27,7 @@ class CustomHomeSection2 extends StatelessWidget {
             children: <Widget>[
               Text(
                 "No Weather Yet ",
-                style: Styles.textStyle20
-                    .copyWith(fontWeight: FontWeight.bold, color: kGreenColor),
+                style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold, color: kGreenColor),
               ),
               Image(
                 image: AssetImage(ImageManager.noEntryGif),
@@ -43,8 +43,7 @@ class CustomHomeSection2 extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: kPadding30),
             child: Text(
               "Search now for your location ",
-              style: Styles.textStyle20
-                  .copyWith(fontWeight: FontWeight.bold, color: kGreenColor),
+              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold, color: kGreenColor),
             ),
           ),
           const SizedBox(

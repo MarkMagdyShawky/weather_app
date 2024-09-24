@@ -6,15 +6,16 @@ import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:weather_app/core/widget/custom_error_widget.dart';
+import 'package:weather_app/core/widget/custom_loading_widget.dart';
 import 'package:weather_app/features/home/presentation/manager/weather_cubit/weather_cubit.dart';
+import 'package:weather_app/features/onboarding/presentation/view/onboarding_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   HomeViewBody({super.key});
+  WeatherModel? weatherData;
 
   @override
   Widget build(BuildContext context) {
-    WeatherModel? weatherData = BlocProvider.of<WeatherCubit>(context).weatherModel!;
-
     return Container(
         width: PageDimensions().pageWidth(context),
         height: PageDimensions().pageHeight(context),
@@ -25,11 +26,14 @@ class HomeViewBody extends StatelessWidget {
           builder: (context, state) {
             if (state is WeatherSuccess) {
               weatherData = BlocProvider.of<WeatherCubit>(context).weatherModel;
-              return getUI(weatherData!.current!.condition!.code!, weatherData!);
+
+              return getUI(1000, weatherData!);
             } else if (state is WeatherFailure) {
               return CustomErrorWidget(errMessage: 'Ahaaa');
+            } else if (state is WeatherLoading) {
+              return CustomLoadingWidget();
             } else {
-              return getUI(weatherData!.current!.condition!.code!, weatherData!);
+              return OnboardingView();
             }
           },
         ));
