@@ -13,7 +13,7 @@ class Current extends Equatable {
   final double? windKph;
   final int? windDegree;
   final String? windDir;
-  final int? pressureMb;
+  final double? pressureMb;
   final double? pressureIn;
   final double? precipMm;
   final double? precipIn;
@@ -28,8 +28,8 @@ class Current extends Equatable {
   final double? dewpointC;
   final double? dewpointF;
   final double? visKm;
-  final int? visMiles;
-  final int? uv;
+  final double? visMiles;
+  final double? uv;
   final double? gustMph;
   final double? gustKph;
 
@@ -71,14 +71,13 @@ class Current extends Equatable {
         tempC: (json['temp_c'] as num?)?.toDouble(),
         tempF: (json['temp_f'] as num?)?.toDouble(),
         isDay: json['is_day'] as int?,
-        condition: json['condition'] == null
-            ? null
-            : Condition.fromJson(json['condition'] as Map<String, dynamic>),
+        condition:
+            json['condition'] == null ? null : Condition.fromJson(json['condition'] as Map<String, dynamic>),
         windMph: (json['wind_mph'] as num?)?.toDouble(),
         windKph: (json['wind_kph'] as num?)?.toDouble(),
         windDegree: json['wind_degree'] as int?,
         windDir: json['wind_dir'] as String?,
-        pressureMb: json['pressure_mb'] as int?,
+        pressureMb: json['pressure_mb'] as double?,
         pressureIn: (json['pressure_in'] as num?)?.toDouble(),
         precipMm: (json['precip_mm'] as num?)?.toDouble(),
         precipIn: (json['precip_in'] as num?)?.toDouble(),
@@ -93,8 +92,8 @@ class Current extends Equatable {
         dewpointC: (json['dewpoint_c'] as num?)?.toDouble(),
         dewpointF: (json['dewpoint_f'] as num?)?.toDouble(),
         visKm: (json['vis_km'] as num?)?.toDouble(),
-        visMiles: json['vis_miles'] as int?,
-        uv: json['uv'] as int?,
+        visMiles: json['vis_miles'] as double?,
+        uv: json['uv'] as double?,
         gustMph: (json['gust_mph'] as num?)?.toDouble(),
         gustKph: (json['gust_kph'] as num?)?.toDouble(),
       );

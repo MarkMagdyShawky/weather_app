@@ -13,14 +13,14 @@ class WeatherInitial extends WeatherState {}
 class WeatherLoading extends WeatherState {}
 
 class WeatherSuccess extends WeatherState {
-  final WeatherModel weatherModel;
+  WeatherModel weatherModel;
   WeatherSuccess({
     required this.weatherModel,
   });
 }
 
 class WeatherFailure extends WeatherState {
-  final String errMessage;
+  String errMessage;
   WeatherFailure({
     required this.errMessage,
   });

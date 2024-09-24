@@ -1,14 +1,16 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dio/dio.dart';
+import 'package:weather_app/core/Models/weather_model/weather_model.dart';
 
 class ApiService {
-  Dio dio = Dio();
+  final Dio _dio;
+
+  ApiService(this._dio);
 
   String baseUrl = 'http://api.weatherapi.com/v1/';
-  ApiService();
 
-  Future<Map<String, dynamic>> get({required String endPoint}) async {
-    var response = await dio.get('$baseUrl$endPoint');
+  Future<WeatherModel> fetchWeather({required String endPoint}) async {
+    var response = await _dio.get('$baseUrl$endPoint}');
+    print('====>>>>>>>>>$response');
     return response.data;
   }
 }

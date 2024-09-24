@@ -13,16 +13,16 @@ class Day extends Equatable {
   final double? maxwindKph;
   final double? totalprecipMm;
   final double? totalprecipIn;
-  final int? totalsnowCm;
+  final double? totalsnowCm;
   final double? avgvisKm;
-  final int? avgvisMiles;
+  final double? avgvisMiles;
   final int? avghumidity;
   final int? dailyWillItRain;
   final int? dailyChanceOfRain;
   final int? dailyWillItSnow;
   final int? dailyChanceOfSnow;
   final Condition? condition;
-  final int? uv;
+  final double? uv;
 
   const Day({
     this.maxtempC,
@@ -58,18 +58,17 @@ class Day extends Equatable {
         maxwindKph: (json['maxwind_kph'] as num?)?.toDouble(),
         totalprecipMm: (json['totalprecip_mm'] as num?)?.toDouble(),
         totalprecipIn: (json['totalprecip_in'] as num?)?.toDouble(),
-        totalsnowCm: json['totalsnow_cm'] as int?,
+        totalsnowCm: json['totalsnow_cm'] as double?,
         avgvisKm: (json['avgvis_km'] as num?)?.toDouble(),
-        avgvisMiles: json['avgvis_miles'] as int?,
+        avgvisMiles: json['avgvis_miles'] as double?,
         avghumidity: json['avghumidity'] as int?,
         dailyWillItRain: json['daily_will_it_rain'] as int?,
         dailyChanceOfRain: json['daily_chance_of_rain'] as int?,
         dailyWillItSnow: json['daily_will_it_snow'] as int?,
         dailyChanceOfSnow: json['daily_chance_of_snow'] as int?,
-        condition: json['condition'] == null
-            ? null
-            : Condition.fromJson(json['condition'] as Map<String, dynamic>),
-        uv: json['uv'] as int?,
+        condition:
+            json['condition'] == null ? null : Condition.fromJson(json['condition'] as Map<String, dynamic>),
+        uv: json['uv'] as double?,
       );
 
   Map<String, dynamic> toJson() => {

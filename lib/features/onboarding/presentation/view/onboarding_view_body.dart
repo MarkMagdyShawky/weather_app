@@ -5,6 +5,8 @@ import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
+import 'package:weather_app/features/onboarding/presentation/widgets/custom_app_bar.dart';
+import 'package:weather_app/features/onboarding/presentation/widgets/custom_home_section2.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({super.key});

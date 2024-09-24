@@ -14,8 +14,7 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody>
-    with SingleTickerProviderStateMixin {
+class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
@@ -53,11 +52,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void SlidingAnimationHelper() {
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 2));
+    animationController = AnimationController(vsync: this, duration: const Duration(seconds: 2));
     slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
-            .animate(animationController);
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero).animate(animationController);
     animationController.forward();
   }
 
@@ -65,7 +62,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        GoRouter.of(context).pushReplacement(RoutesName.kHomeView);
+        GoRouter.of(context).pushReplacement(RoutesName.kOnboardingView);
       },
     );
   }

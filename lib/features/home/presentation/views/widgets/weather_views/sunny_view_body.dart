@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/Models/weather_model/weather_model.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
@@ -10,8 +11,8 @@ import 'package:weather_app/features/home/presentation/views/widgets/custom_weat
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_state_image.dart';
 
 class SunnyViewBody extends StatelessWidget {
-  const SunnyViewBody({super.key});
-
+  const SunnyViewBody({super.key, required this.weatherModel});
+  final WeatherModel weatherModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,23 +22,23 @@ class SunnyViewBody extends StatelessWidget {
         gradient: LinearGradientbackground(kSunnyColorList),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(
-            top: kPadding30, right: kPadding20, left: kPadding20),
+        padding: const EdgeInsets.only(top: kPadding30, right: kPadding20, left: kPadding20),
         child: ListView(
           children: <Widget>[
             CustomWeatherAppBar(
-              location: "San Fransisco",
-              updatingTime: '11:00',
+              location: weatherModel.location!.name.toString(),
+              updatingTime:
+                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour} : ${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
               locationColor: kFontWhite1,
               timeColor: kFontWhite2,
             ),
             CustomWeatherStateImage(image: ImageManager.thunderstormJson),
             const SizedBox(height: kPadding30),
             CustomCurrentWeatherData(
-              weatherState: 'Thunderstorm',
-              currentTemp: '24',
-              minTemp: '21',
-              maxTemp: '25',
+              weatherState: '${weatherModel.current!.condition!.text}',
+              currentTemp: '${weatherModel.current!.tempC}',
+              minTemp: '${weatherModel.forecast!.forecastday![0].day!.mintempC!}',
+              maxTemp: '${weatherModel.forecast!.forecastday![0].day!.maxtempC!}',
               textsColor: kFontWhite1,
             ),
             Image(image: AssetImage(ImageManager.vectorLine)),

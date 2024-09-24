@@ -13,11 +13,11 @@ class Hour extends Equatable {
   final double? windKph;
   final int? windDegree;
   final String? windDir;
-  final int? pressureMb;
+  final double? pressureMb;
   final double? pressureIn;
   final double? precipMm;
   final double? precipIn;
-  final int? snowCm;
+  final double? snowCm;
   final int? humidity;
   final int? cloud;
   final double? feelslikeC;
@@ -32,11 +32,10 @@ class Hour extends Equatable {
   final int? chanceOfRain;
   final int? willItSnow;
   final int? chanceOfSnow;
-  final int? visKm;
-  final int? visMiles;
-  final int? gustMph;
+  final double? visKm;
+  final double? visMiles;
+  final double? gustMph;
   final double? gustKph;
-  final int? uv;
 
   const Hour({
     this.timeEpoch,
@@ -72,7 +71,6 @@ class Hour extends Equatable {
     this.visMiles,
     this.gustMph,
     this.gustKph,
-    this.uv,
   });
 
   factory Hour.fromJson(Map<String, dynamic> json) => Hour(
@@ -81,18 +79,17 @@ class Hour extends Equatable {
         tempC: (json['temp_c'] as num?)?.toDouble(),
         tempF: (json['temp_f'] as num?)?.toDouble(),
         isDay: json['is_day'] as int?,
-        condition: json['condition'] == null
-            ? null
-            : Condition.fromJson(json['condition'] as Map<String, dynamic>),
+        condition:
+            json['condition'] == null ? null : Condition.fromJson(json['condition'] as Map<String, dynamic>),
         windMph: (json['wind_mph'] as num?)?.toDouble(),
         windKph: (json['wind_kph'] as num?)?.toDouble(),
         windDegree: json['wind_degree'] as int?,
         windDir: json['wind_dir'] as String?,
-        pressureMb: json['pressure_mb'] as int?,
+        pressureMb: json['pressure_mb'] as double?,
         pressureIn: (json['pressure_in'] as num?)?.toDouble(),
         precipMm: (json['precip_mm'] as num?)?.toDouble(),
         precipIn: (json['precip_in'] as num?)?.toDouble(),
-        snowCm: json['snow_cm'] as int?,
+        snowCm: json['snow_cm'] as double?,
         humidity: json['humidity'] as int?,
         cloud: json['cloud'] as int?,
         feelslikeC: (json['feelslike_c'] as num?)?.toDouble(),
@@ -107,11 +104,10 @@ class Hour extends Equatable {
         chanceOfRain: json['chance_of_rain'] as int?,
         willItSnow: json['will_it_snow'] as int?,
         chanceOfSnow: json['chance_of_snow'] as int?,
-        visKm: json['vis_km'] as int?,
-        visMiles: json['vis_miles'] as int?,
-        gustMph: json['gust_mph'] as int?,
+        visKm: json['vis_km'] as double?,
+        visMiles: json['vis_miles'] as double?,
+        gustMph: json['gust_mph'] as double?,
         gustKph: (json['gust_kph'] as num?)?.toDouble(),
-        uv: json['uv'] as int?,
       );
 
   Map<String, dynamic> toJson() => {
@@ -148,7 +144,6 @@ class Hour extends Equatable {
         'vis_miles': visMiles,
         'gust_mph': gustMph,
         'gust_kph': gustKph,
-        'uv': uv,
       };
 
   @override
@@ -187,7 +182,6 @@ class Hour extends Equatable {
       visMiles,
       gustMph,
       gustKph,
-      uv,
     ];
   }
 }

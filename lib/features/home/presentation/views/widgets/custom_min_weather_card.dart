@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/styles.dart';
 
