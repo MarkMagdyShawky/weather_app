@@ -15,6 +15,18 @@ Welcome to the **Weather App**, a Flutter-based mobile application that provides
 
 -----
 
+
+## 📸 Screenshots
+ Image 1 | Image 2 |
+|---------|---------|
+| ![Image 1](./App_screenshots/30.png) | ![Image 2](./App_screenshots/31.png) |
+
+ Image 3 | Image 4 |
+|---------|---------|
+| ![Image 3](./App_screenshots/28.png) | ![Image 4](./App_screenshots/29.png) |
+
+-----
+
 ## 🛠️ Technologies & Tools
 
 The app is built using the following technologies:
@@ -43,7 +55,7 @@ The app follows MVVM design pattern to ensure scalability and maintainability:
   - `data/` - Contains API services and data models.
   - `logic/` - Bloc Cubit files for state management.
   - `presentation/` - All UI screens and widgets.
-  - `core/` - Common utilities, theme, and service locator.
+  - `core/` - Common utilities, theme, and weather service.
 
 -------
 
