@@ -2,8 +2,6 @@
   <h1>🌤️ Weather App</h1>
 </div>
 
------
-
 Welcome to the **Weather App**, a Flutter-based mobile application that provides real-time weather updates and a 3-day forecast with a visually appealing and animated interface.
 
 ## 📱 Features
