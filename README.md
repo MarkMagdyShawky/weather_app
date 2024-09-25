@@ -1,6 +1,4 @@
-
 <div align="center">
-  <img src="./assets/images/logo/weatherLogo1.png" alt="Logo" width="80"/>
   <h1>🌤️ Weather App</h1>
 </div>
 
