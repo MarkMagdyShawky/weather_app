@@ -28,12 +28,12 @@ class CustomWeatherAppBar extends StatelessWidget {
           children: [
             Text(
               location,
-              style: Styles.textStyle20.copyWith(color: locationColor),
+              style: Styles.textStyle22.copyWith(color: locationColor),
             ),
-            const SizedBox(height: kPadding10),
+            const SizedBox(height: kPadding10 - 5),
             Text(
-              updatingTime,
-              style: Styles.textStyle18.copyWith(color: timeColor),
+              'Updated at $updatingTime',
+              style: Styles.textStyle16.copyWith(color: timeColor),
             ),
           ],
         ),
@@ -43,8 +43,8 @@ class CustomWeatherAppBar extends StatelessWidget {
           },
           child: Image(
             image: AssetImage(ImageManager.searchGif),
-            width: 30,
-            height: 30,
+            width: 34,
+            height: 34,
           ),
         ),
       ],

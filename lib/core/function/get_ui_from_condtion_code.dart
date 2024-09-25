@@ -6,7 +6,7 @@ import 'package:weather_app/features/home/presentation/views/widgets/weather_vie
 
 Widget getUI(int code, WeatherModel weatherModel) {
   // Category 1: Clear/Sunny
-  if (code == 1000 || code == 1003) {
+  if (code == 1000) {
     return SunnyViewBody(weatherModel: weatherModel);
   }
 
@@ -41,7 +41,8 @@ Widget getUI(int code, WeatherModel weatherModel) {
     return CloudyViewBody(
       weatherModel: weatherModel,
     );
-  } else if (code == 1006 ||
+  } else if (code == 1003 ||
+      code == 1006 ||
       code == 1030 ||
       code == 1114 ||
       code == 1117 ||

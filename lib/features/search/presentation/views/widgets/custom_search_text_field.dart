@@ -38,8 +38,12 @@ class CustomSearchTextField extends StatelessWidget {
           padding: EdgeInsets.all(kPadding10),
           child: GestureDetector(
             onTap: () {
+              if (cityName == null) {
+                GoRouter.of(context).pushReplacement(RoutesName.kOnboardingView);
+                return null;
+              }
               BlocProvider.of<WeatherCubit>(context).getWeather(locatin: cityName!);
-              Navigator.pop(context);
+              GoRouter.of(context).pop(context);
             },
             child: Image(
               image: AssetImage(ImageManager.searchGif),

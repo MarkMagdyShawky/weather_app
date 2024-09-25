@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/Models/weather_model/weather_model.dart';
+import 'package:weather_app/core/function/get_condtion_image.dart';
 import 'package:weather_app/core/utils/color_manager.dart';
 import 'package:weather_app/core/utils/gradient_manager.dart';
 import 'package:weather_app/core/utils/image_manager.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_current_weather_data.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/custom_forecast_list.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_min_weather_card.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_app_bar.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_state_image.dart';
@@ -29,11 +31,15 @@ class CloudyViewBody extends StatelessWidget {
             CustomWeatherAppBar(
               location: weatherModel.location!.name.toString(),
               updatingTime:
-                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour} : ${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
+                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour}:${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
               locationColor: kFontWhite1,
               timeColor: kFontWhite2,
             ),
-            CustomWeatherStateImage(image: ImageManager.thunderstormJson),
+            CustomWeatherStateImage(
+              image: getConditionImage(
+                weatherModel.current!.condition!.text!.trim().toLowerCase(),
+              ),
+            ),
             const SizedBox(height: kPadding30),
             CustomCurrentWeatherData(
               weatherState: '${weatherModel.current!.condition!.text}',
@@ -44,40 +50,7 @@ class CloudyViewBody extends StatelessWidget {
             ),
             Image(image: AssetImage(ImageManager.vectorLine)),
             const SizedBox(height: kPadding10),
-            SizedBox(
-              width: PageDimensions().pageWidth(context) - 40,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: kPadding15),
-                    decoration: BoxDecoration(
-                      color: kFontBlack1.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: CustomMinWeatherCard(
-                      date: '22/9',
-                      image: ImageManager.cloudGif,
-                      temp: '23',
-                      textsColor: kFontWhite1,
-                    ),
-                  ),
-                  CustomMinWeatherCard(
-                    date: '22/9',
-                    image: ImageManager.cloudGif,
-                    temp: '23',
-                    textsColor: kFontWhite1,
-                  ),
-                  // Current day
-                  CustomMinWeatherCard(
-                    date: '22/9',
-                    image: ImageManager.cloudGif,
-                    temp: '23',
-                    textsColor: kFontWhite1,
-                  ),
-                ],
-              ),
-            )
+            CustomForecastList(weatherModel: weatherModel, textColor: kFontWhite1),
           ],
         ),
       ),

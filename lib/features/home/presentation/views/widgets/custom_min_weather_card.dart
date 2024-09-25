@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/function/check_image_extention.dart';
 import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/styles.dart';
 
@@ -24,11 +25,7 @@ class CustomMinWeatherCard extends StatelessWidget {
           style: Styles.textStyle20.copyWith(color: textsColor),
         ),
         const SizedBox(height: kPadding10),
-        Image(
-          image: AssetImage(image),
-          width: 60,
-          height: 60,
-        ),
+        checkImageExtention(image, 60, 60),
         const SizedBox(height: kPadding10),
         Text(
           "$temp°",
