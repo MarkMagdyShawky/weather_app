@@ -1,5 +1,6 @@
+
 <div align="center">
-  <img src="./App_screenshots/magicBook.png" alt="Logo" width="80"/>
+  <img src="./assets/images/logo/weatherLogo1.png" alt="Logo" width="80"/>
   <h1>🌤️ Weather App</h1>
 </div>
 
