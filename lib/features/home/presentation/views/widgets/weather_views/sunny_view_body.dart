@@ -8,7 +8,6 @@ import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_current_weather_data.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_forecast_list.dart';
-import 'package:weather_app/features/home/presentation/views/widgets/custom_min_weather_card.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_app_bar.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_state_image.dart';
 
@@ -30,7 +29,7 @@ class SunnyViewBody extends StatelessWidget {
             CustomWeatherAppBar(
               location: weatherModel.location!.name.toString(),
               updatingTime:
-                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour} : ${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
+                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour}:${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
               locationColor: kFontWhite1,
               timeColor: kFontWhite2,
             ),

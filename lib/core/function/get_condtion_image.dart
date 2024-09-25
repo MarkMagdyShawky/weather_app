@@ -1,5 +1,5 @@
 String getConditionImage(String condition) {
-  if (condition == 'Sunny') {
+  if (condition == 'sunny') {
     return 'assets/images/conditions/sunny.json';
   }
   //

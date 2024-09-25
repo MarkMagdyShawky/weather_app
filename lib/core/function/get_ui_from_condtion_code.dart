@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/Models/weather_model/weather_model.dart';
-import 'package:weather_app/features/home/presentation/views/widgets/weather_views/cloudy_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/dark_view_body.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/weather_views/sunny_view_body.dart';
-import 'package:weather_app/features/home/presentation/views/widgets/weather_views/thunderstorm_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/light_view_body.dart';
 
 Widget getUI(int code, WeatherModel weatherModel) {
   // Category 1: Clear/Sunny
-  if (code == 1000) {
+  if (code == 1000 || code == 1003) {
     return SunnyViewBody(weatherModel: weatherModel);
   }
 
@@ -38,11 +38,10 @@ Widget getUI(int code, WeatherModel weatherModel) {
       code == 1261 ||
       code == 1273 ||
       code == 1279) {
-    return CloudyViewBody(
+    return DarkViewBody(
       weatherModel: weatherModel,
     );
-  } else if (code == 1003 ||
-      code == 1006 ||
+  } else if (code == 1006 ||
       code == 1030 ||
       code == 1114 ||
       code == 1117 ||
@@ -61,7 +60,7 @@ Widget getUI(int code, WeatherModel weatherModel) {
       code == 1264 ||
       code == 1276 ||
       code == 1282) {
-    return ThunderstormViewBody(weatherModel: weatherModel);
+    return LightViewBody(weatherModel: weatherModel);
   }
 
   return SunnyViewBody(

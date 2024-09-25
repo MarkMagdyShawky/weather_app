@@ -29,7 +29,7 @@ class HomeViewBody extends StatelessWidget {
               print('==============>>>>>>>${weatherData!.current!.condition!.code!}');
               return getUI(weatherData!.current!.condition!.code!, weatherData!);
             } else if (state is WeatherFailure) {
-              return CustomErrorWidget(errMessage: 'Ahaaa');
+              return CustomErrorWidget(errMessage: 'Ops, Somesing Wrong try again late!');
             } else if (state is WeatherLoading) {
               return CustomLoadingWidget();
             } else {

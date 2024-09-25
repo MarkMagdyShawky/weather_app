@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/features/home/presentation/views/screens/home_view_body.dart';
-import 'package:weather_app/features/home/presentation/views/widgets/weather_views/cloudy_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/dark_view_body.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/weather_views/sunny_view_body.dart';
-import 'package:weather_app/features/home/presentation/views/widgets/weather_views/thunderstorm_view_body.dart';
+import 'package:weather_app/features/home/presentation/views/widgets/weather_views/light_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

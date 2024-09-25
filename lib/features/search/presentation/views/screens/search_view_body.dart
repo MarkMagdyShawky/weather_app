@@ -23,7 +23,7 @@ class SearchViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              "Search For any Countery",
+              "Search for any location",
               style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 15),

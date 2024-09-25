@@ -8,20 +8,20 @@ import 'package:weather_app/core/utils/padding_manager.dart';
 import 'package:weather_app/core/utils/pageDimensions.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_current_weather_data.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_forecast_list.dart';
-import 'package:weather_app/features/home/presentation/views/widgets/custom_min_weather_card.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_app_bar.dart';
 import 'package:weather_app/features/home/presentation/views/widgets/custom_weather_state_image.dart';
 
-class ThunderstormViewBody extends StatelessWidget {
-  const ThunderstormViewBody({super.key, required this.weatherModel});
+class DarkViewBody extends StatelessWidget {
+  DarkViewBody({super.key, required this.weatherModel});
   final WeatherModel weatherModel;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: PageDimensions().pageWidth(context),
       height: PageDimensions().pageHeight(context),
       decoration: BoxDecoration(
-        gradient: LinearCenterGradientbackground(kThunderstormColorList),
+        gradient: LinearGradientbackground(kCloudyColorList),
       ),
       child: Padding(
         padding: const EdgeInsets.only(top: kPadding30, right: kPadding20, left: kPadding20),
@@ -30,9 +30,9 @@ class ThunderstormViewBody extends StatelessWidget {
             CustomWeatherAppBar(
               location: weatherModel.location!.name.toString(),
               updatingTime:
-                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour} : ${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
-              locationColor: kFontBlack1,
-              timeColor: kFontBlack2,
+                  '${DateTime.parse(weatherModel.current!.lastUpdated!).hour}:${DateTime.parse(weatherModel.current!.lastUpdated!).minute}',
+              locationColor: kFontWhite1,
+              timeColor: kFontWhite2,
             ),
             CustomWeatherStateImage(
               image: getConditionImage(
@@ -45,7 +45,7 @@ class ThunderstormViewBody extends StatelessWidget {
               currentTemp: '${weatherModel.current!.tempC}',
               minTemp: '${weatherModel.forecast!.forecastday![0].day!.mintempC!}',
               maxTemp: '${weatherModel.forecast!.forecastday![0].day!.maxtempC!}',
-              textsColor: kFontBlack1,
+              textsColor: kFontWhite1,
             ),
             Image(image: AssetImage(ImageManager.vectorLine)),
             const SizedBox(height: kPadding10),
