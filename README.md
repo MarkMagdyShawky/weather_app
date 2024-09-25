@@ -19,11 +19,11 @@ Welcome to the **Weather App**, a Flutter-based mobile application that provides
 ## 📸 Screenshots
  Image 1 | Image 2 |
 |---------|---------|
-| ![Image 1](./App_screenshots/30.png) | ![Image 2](./App_screenshots/31.png) |
+| ![Image 1](./assets/images/logo/34.jpg) | ![Image 2](./assets/images/logo/35.jpg) |
 
  Image 3 | Image 4 |
 |---------|---------|
-| ![Image 3](./App_screenshots/28.png) | ![Image 4](./App_screenshots/29.png) |
+| ![Image 3](./assets/images/logo/36.jpg) | ![Image 4](./assets/images/logo/37.jpg) |
 
 -----
 
