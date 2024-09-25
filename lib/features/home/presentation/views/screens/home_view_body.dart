@@ -26,8 +26,8 @@ class HomeViewBody extends StatelessWidget {
           builder: (context, state) {
             if (state is WeatherSuccess) {
               weatherData = BlocProvider.of<WeatherCubit>(context).weatherModel;
-
-              return getUI(1000, weatherData!);
+              print('==============>>>>>>>${weatherData!.current!.condition!.code!}');
+              return getUI(weatherData!.current!.condition!.code!, weatherData!);
             } else if (state is WeatherFailure) {
               return CustomErrorWidget(errMessage: 'Ahaaa');
             } else if (state is WeatherLoading) {
