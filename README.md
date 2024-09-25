@@ -1,5 +1,8 @@
-# 🌤️ Weather App
-
+<div align="center">
+  <img src="./App_screenshots/magicBook.png" alt="Logo" width="80"/>
+  <h1>🌤️ Weather App</h1>
+</div>
+-----
 Welcome to the **Weather App**, a Flutter-based mobile application that provides real-time weather updates and a 3-day forecast with a visually appealing and animated interface.
 
 ## 📱 Features
@@ -8,6 +11,8 @@ Welcome to the **Weather App**, a Flutter-based mobile application that provides
 - **Intuitive Search**: Users can search for weather by location, with easy navigation from the splash screen to the search page.
 - **Beautiful Animations**: Includes smooth animations and JSON/GIF images using Lottie for a more engaging user experience.
 - **Loading Animation**: Aesthetic loading animations provide feedback while fetching weather data.
+
+-----
 
 ## 🛠️ Technologies & Tools
 
@@ -18,7 +23,7 @@ The app is built using the following technologies:
 - **MVVM:** Architectural pattern for separation of concerns, ensuring maintainable code.
 - **Weather API**: Fetching real-time weather data.
 
-  
+----
 
 ### Key Packages
 
@@ -26,6 +31,8 @@ The app is built using the following technologies:
 - **[Go_Router](https://pub.dev/packages/go_router):** Manages app routing with ease and efficiency.
 - **[Equatable](https://pub.dev/packages/equatable):** Simplifies object equality comparisons, crucial for effective state management.
 - **[Lottie](https://pub.dev/packages/lottie):** Efficient image loading and caching for enhanced performance.
+
+-----
 
 ## 📂 Project Structure
 
@@ -36,6 +43,8 @@ The app follows MVVM design pattern to ensure scalability and maintainability:
   - `logic/` - Bloc Cubit files for state management.
   - `presentation/` - All UI screens and widgets.
   - `core/` - Common utilities, theme, and service locator.
+
+-------
 
 ## ⚙️ Installation Guide
 
@@ -53,9 +62,12 @@ To set up the BookNest application locally, follow these steps:
    ```bash
    flutter run
 
+-----
+
 ## 🛡️ License
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
+-----
 
 ## 👤 Author
 
